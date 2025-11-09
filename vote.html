@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote TikStars</title>
+</head>
+<body>
+    <link rel="stylesheet" href="tikstars.css">
+
+    <div id="view-overlay" class="view-overlay">
+        <div class="forClose">
+            <span class="close" onclick="closeView()">&times;</span>
+            <div class="view-content">
+                <img id="viewImage" src="" alt="tiktoker image">
+                    <div>
+                    <h3 id="viewName" style="color: blueviolet;">Beauty Goddess</h3>
+                    <ul>
+                        <li id="viewAge">Age: 24</li>
+                        <li id="viewState">State: Imo</li>
+                        <li id="viewStatus">Status: In a Relationship</li>
+                        <li id="viewFollowers">followers: 4.6M</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container" style="height: 100vh;">
+        <h3 style="color: white; text-align: center; margin-bottom: 30px;">Vote Your TikStar</h3>
+        <marquee behavior="scroll" direction="left" loop="infinite" scrollamount="8" style="color: deeppink; font-weight: 600;">Every vote counts — stay consistent and keep your star shining!
+            don’t stop now, because your consistency keeps them at the top! </marquee>
+        <div class="selection">
+            <div class="search">
+                <h4>Top</h4>
+                <label>Search
+                    <input type="search" id="searchTop" placeholder="Search your TikStar.." onkeyup="filterTiktokers('trackTop', this)">
+                </label>
+            </div>
+            <div class="track" id="trackTop">
+                <div class="slide">
+                    <div class="image"><img src="beautygoddess.PNG" alt="web image"></div>
+                    <h3>Beauty Goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the boundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 4.6M</p> <a href="https://www.tiktok.com/@beeautygoddess" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@beeautygoddess</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)" data-id = "1">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Beauty Goddess" data-age="24" data-state="Imo" data-followers="4.6M" data-image="beautygoddess.PNG">View</button>
+                        </div>
+                        <div class="vote" data-id="1"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 0</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="purplespeedy.jpeg" alt="web image"></div>
+                    <h3>Purple Speedy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                       Speed is her essence, and purple is her aura.
+                       When she dances, the wind follows. When she smiles, the world slows. 
+                       She’s beauty in motion!
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 16M</p> <a href="https://www.tiktok.com/@purplespeedy" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@purplespeedy</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)" data-id = "2">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Purple Speedy" data-age="29" data-state="Lagos" data-status="Single" data-followers="16M" data-image="purplespeedy.jpeg">View</button>
+                        </div>
+                        <div class="vote"  data-id="2"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 0</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to1.PNG" alt="web image"></div>
+                    <h3>Sabinus</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)" data-id = "3">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to3.PNG" alt="web image"></div>
+                    <h3>Edith</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw2.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="a4.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MIDDLE RANGE -->
+            <div class="selection" style="margin-top: 30px;">
+                <div class="search">
+                    <h4 style="width: 100px">Midrange</h4>
+                    <label for="searchM" style="margin-bottom: -20px;">Search
+                         <input type="search" id="searchMid" placeholder="Search your TikStar.." onkeyup="filterTiktokers('trackMid', this)">
+                    </label>
+                </div>
+            <div class="track" id="trackMid">
+                <div class="slide">
+                    <div class="image"><img src="beautygoddess5.PNG" alt="web image"></div>
+                    <h3>Beauty Goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the boundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 4.6M</p> <a href="https://www.tiktok.com/@beeautygoddess" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@beeautygoddess</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Beauty Goddess" data-age="24" data-state="Imo" data-followers="4.6M" data-image="beautygoddess5.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 180</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="pspeedy.PNG" alt="web image"></div>
+                    <h3>Purple Speedy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                       Speed is her essence, and purple is her aura.
+                       When she dances, the wind follows. When she smiles, the world slows. 
+                       She’s beauty in motion!
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 16M</p> <a href="https://www.tiktok.com/@purplespeedy" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@purplespeedy</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Purple Speedy" data-age="29" data-state="Lagos" data-status="Single" data-followers="16M" data-image="pspeedy.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to1.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide tiktoker-slide">
+                    <div class="image"><img src="to3.PNG" alt="web image"></div>
+                    <h3 class="tiktoker-name">Sabinus</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw2.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="a4.PNG" alt="web image"></div>
+                    <h3>Nancy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Tiktokers -->
+            <div class="selection" style="margin-top: 30px;">
+                <div class="search">
+                    <h4>Local</h4>
+                    <label for="search" style="margin-bottom: -20px;">
+                        Search <input type="search" id="searchLocal" placeholder="Search your TikStar.." onkeyup="filterTiktokers('trackLocal', this)">
+                    </label>
+                </div>
+            
+            <div class="track" id="trackLocal">
+                <div class="slide">
+                    <div class="image"><img src="beautygoddess5.PNG" alt="web image"></div>
+                    <h3>Beauty Goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the boundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 4.6M</p> <a href="https://www.tiktok.com/@beeautygoddess" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@beeautygoddess</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Beauty Goddess" data-age="24" data-state="Imo" data-followers="4.6M" data-image="beautygoddess5.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 180</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="pspeedy.PNG" alt="web image"></div>
+                    <h3>Purple Speedy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                       Speed is her essence, and purple is her aura.
+                       When she dances, the wind follows. When she smiles, the world slows. 
+                       She’s beauty in motion!
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 16M</p> <a href="https://www.tiktok.com/@purplespeedy" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@purplespeedy</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Purple Speedy" data-age="29" data-state="Lagos" data-status="Single" data-followers="16M" data-image="pspeedy.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to1.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw2.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="a4.PNG" alt="web image"></div>
+                    <h3>Kiki</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foreign TikTokers -->
+             <div class="selection" style="margin-top: 30px;">
+                <div class="search">
+                    <h4 style="width: 80px">Foreign</h4>
+                    <label for="search" style="margin-bottom: -20px;">
+                        Search <input type="search" id="searchForeign" placeholder="Search your TikStar.." onkeyup="filterTiktokers('trackForeign', this)">
+                    </label>
+                </div>
+            <div class="track" id="trackForeign">
+                <div class="slide">
+                    <div class="image"><img src="beautygoddess5.PNG" alt="web image"></div>
+                    <h3>Beauty Goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the boundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 4.6M</p> <a href="https://www.tiktok.com/@beeautygoddess" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@beeautygoddess</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Beauty Goddess" data-age="24" data-state="Imo" data-followers="4.6M" data-image="beautygoddess5.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 180</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="pspeedy.PNG" alt="web image"></div>
+                    <h3>Purple Speedy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                       Speed is her essence, and purple is her aura.
+                       When she dances, the wind follows. When she smiles, the world slows. 
+                       She’s beauty in motion!
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 16M</p> <a href="https://www.tiktok.com/@purplespeedy" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@purplespeedy</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Purple Speedy" data-age="29" data-state="Lagos" data-status="Single" data-followers="16M" data-image="pspeedy.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to1.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw2.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw3.PNG" alt="web image"></div>
+                    <h3>Buchi</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="a4.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legendary Tiktokers -->
+             <div class="selection" style="margin-top: 30px;">
+                <div class="search">
+                    <h4 style="width: 100px">Legendary</h4>
+                    <label for="search" style="margin-bottom: -20px;">
+                        Search <input type="search" id="searchLegend" placeholder="Search your TikStar.." onkeyup="filterTiktokers('trackLegend', this)">
+                    </label>
+                </div>
+            <div class="track" id="trackLegend">
+                <div class="slide tiktoker-slide">
+                    <div class="image"><img src="beautygoddess5.PNG" alt="web image"></div>
+                    <h3 class="tiktoker-name">Sydney Talker</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the boundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 4.6M</p> <a href="https://www.tiktok.com/@beeautygoddess" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@beeautygoddess</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Beauty Goddess" data-age="24" data-state="Imo" data-followers="4.6M" data-image="beautygoddess5.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 180</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="pspeedy.PNG" alt="web image"></div>
+                    <h3>Purple Speedy</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                       Speed is her essence, and purple is her aura.
+                       When she dances, the wind follows. When she smiles, the world slows. 
+                       She’s beauty in motion!
+                    </p>
+                    <div class="dialog">
+                        <p>followers: 16M</p> <a href="https://www.tiktok.com/@purplespeedy" target="_blank" rel="noopener noreferrer" style="color: deeppink; font-size: 0.85em;">@purplespeedy</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker(this)" data-name="Purple Speedy" data-age="29" data-state="Lagos" data-status="Single" data-followers="16M" data-image="pspeedy.PNG">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to1.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="to3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker(this)">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw2.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="bmw3.PNG" alt="web image"></div>
+                    <h3>Beauty goddess</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink;font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="image"><img src="a4.PNG" alt="web image"></div>
+                    <h3>Arya Star</h3>
+                    <p style="background: rgba(255, 105, 180, 0.2);">
+                        Beauty transcend the aboundaries of beauties. 
+                        she is every man's desire and dream.
+                        No man could resist her smile!
+                        beautiful like no other
+                    </p>
+                    <div class="dialog">
+                        <p>Age: -> 29</p>|<p>followers: 1.5M</p>|<a href="" style="color: deeppink; font-size: 0.85em;">@beautygoddess1</a>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btns">
+                            <button onclick="voteToker()">Vote</button>
+                            <button onclick="viewToker()">View</button>
+                        </div>
+                        <div class="vote"><img src="pp.png" alt="web logo" style="width: 15px; height: 15px;"> 185</div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="dashboard.php" style="color: deeppink; font-weight: 400; cursor: pointer; text-decoration: none; font-weight: 600;">Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <audio id="voteMusic" autoplay hidden></audio>
+    <script src="tikstarss.js"></script>
+</body>
+</html>
